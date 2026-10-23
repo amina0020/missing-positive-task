@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest Missing Positive Number</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        input { padding: 8px; width: 300px; }
+        button { padding: 8px 15px; }
+        #result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Smallest Missing Positive Number Finder</h2>
+    <p>Enter numbers separated by spaces (e.g., <code>1 2 0 -1</code>):</p>
+    
+    <input type="text" id="userInput" placeholder="1 2 0 -1">
+    <button onclick="findMissingNumber()">Calculate</button>
+    
+    <div id="result"></div>
+
+    <script>
+        function findMissingNumber() {
+            const input = document.getElementById('userInput').value;
+            const nums = input.trim().split(/\s+/).map(Number);
+            
+            let number = 1;
+            while (nums.includes(number)) {
+                number++;
+            }
+            
+            document.getElementById('resultinnerText = `The smallest missing positive number is: ${number}`;
+        }
+    </script>
+
+</body>
+</html>
